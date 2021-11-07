@@ -6,52 +6,238 @@
         <meta name="viewport"content="width=device-width,initial-scale 1.0">
         <style type="text/css"></style>
         <title>Serviço de Atendimento ao Consumidor</title>
+        <script type="text/javascript">
+        function validaForm(frm) {
+            if(frm.nome.value=="" ||
+            frm.nome.value==null ||
+            frm.nome.value.lenght <3) {
+                alert("Por favor,indique o seu nome.");
+                frm.nome.focus();
+                return false;
+            }
+            
+            if(frm.email.value.indexOf("@")==-1 ||
+            frm.email.valueOf.index.Of(".")==-1 ||
+            frm.email.value=="" ||
+            frm.email.value==null) {
+                alert("Por favor,indique um e-mail valido.");
+                frm.email.focus();
+                return false;
+            }
+            
+            escolhaSexo=-1;
+            
+            for(x=frm.sexo.lenght-1; x >-1;x--) {
+                if(frm.sexo[x].checked) {
+                    escolhaSexo=x;
+                }
+            }
+            
+            if(escolhaSexo==-1) {
+                alert("qual o seu sexo?");
+                frm.sexo[0].focus();
+                return false;
+            }
+            
+            if(frm.prof.value=="" || frm.prof.value=="Todas") {
+                alert("De momento,precisamos de especialistas nas três áreas indicadas");
+                frm.prof.focus();
+                return false;
+            }
+            
+            if(frm.sobre.value=="" || frm.sobre.value==null) {
+                alert("Por favor,conte-nos um pouco sobre si.");
+                frm.sobre.focus();
+                return false;
+                }
+            }
+            </script>
+          </head>
         <style>
-            body {
-                background-color: blue;
-            }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            .logo-texto {
-                font-size: xx-large;
-                margin-left:20px;
-                color:white;
-                text-align:left;
-            }
+body {
+    background-color: blue;
+}
 
-            h2 {
-                color: white;
-                text-align: center;
-            }
+/* cabeçalho */
 
-            h3 {
-                color: white;
-                text-align: center;
-            }
+header {
+    height: 200px;
+    width:100%;
+    background-color:#4287f5;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
 
-            section {
-                color: white;
-                text-align: left;
-            }
+.logo-imagem {
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius: 25px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-texto {
+    font-size:xx-large;
+    margin-left:20px;
+    color:white;
+}
+
+.menu li {
+    display:inline-block;
+    margin: 0 10px;
+}
+
+.menu li a{
+    font-size: 24px;
+    text-decoration:none;
+    color:white;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+    
+.menu li a:hover{
+    background-color: darkgrey;
+}
+
+
+h1 {
+    color:white;
+    text-align: left;
+}
+
+h2 {
+    color:white;
+    text-align: center;
+}
+
+h3 {
+    color:white;
+    text-align:center;
+}
+
+form {
+    width: 420px;
+    height: 420px;
+    background-color:none;
+    padding: 10px;
+    font-family:sans-serif;
+    color:white;
+    size:16px;
+}
+
+
+
+input[type=text], input[type=email] {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #999;
+    outline: 0;
+}
+
+.footer {
+    height: 150px;
+    background:#0b3aea;
+
+}
+
+.footer h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform:uppercase;
+    margin-top:20px;
+    text-align:center;
+    color:white;
+}
+
+
+.footer h2 { 
+    font-family:sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align:left;
+    text-transform:unset;
+    color:white;
+    margin-top:20px;
+}
+
+.logos-redes {
+    margin-top: 20px;
+}
         </style>
     </head>
     <body>
         <header>
-         <div class="logo.imagem">
-         <div class="logo-texto">
-             <h1>VISION.Games...</h1>
-        </header>
-         <div class="container-texto"></div>
-             <h2>Serviço de Atendimento ao Consumidor</h2>
-             <h3>Como podemos te ajudar?</h3>
-             <h3>Esclareça suas Duvidas.</h3>
-             <h3>Reclamações.</h3>
-             <h3>Sugestões.</h3>
-         <section class="footer">
-             <p>Endereço:Rua:A,32 Vila Alegre São Paulo SP</p>
-             <p>CEP-03240-050 Tel:4040-2020</p>
-             <p>Email:Vision@gmail.com.br</p>
-             <p>WWW.VISION.COM.BR</p>
-         </section>
+            <div class="container.logo">
+              <div class="logo.imagem"><img src="ball-ga01ef38de_1920.jpg" width="100px"heigth="100px">  
+                <div class="logo-texto">
+                  <h1>VISION.games...</h1>
+                </div>
+              </div>
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="desktop.ini.html">SOBRE</a></li>
+                <li><a href="TodososDepartamentos.html">Todos os Departamentos</a></li>
+                <li><a href="Login.html">Login</a></li>
+              </ul>
+            </div>
+        </header> 
+             <div class="texto">
+                 <h2>Serviço de Atendimento ao Consumidor.</h2>
+                 <h3>Horario de Atendimento das 07:00 as 18:00 hs.</h3>
+                 <h3>Esclareça suas Duvidas?</h3>
+                 <h3>Reclamações.</h3>
+                 <h3>Sugestões.</h3></div>
+        
+             <form name="frmTeste" method="post" action="#" onsubmit="return validaForm(this);">
+                 <p>Cadastre-se e adquira Beneficios:</p>
+                 <p>Nome:<input type="text" name="nome" id="nome"/></p>
+                 <p>Email:<input type="text" name="email" id="email"/></p>
+                 <p>Sexo:
+                 <label><input type="radio" name="sexo" value="M" id="masc"/>Masculino</label>
+                 <label><input type="radio" name="sexo" value="F" id="masc"/>Feminino</label>
+                 </p>
+                 <p>Profissão
+                <select name="cargo">
+                 <option value="">Selecione o cargo</option>
+                 <option value="programador">Programador</option>
+                 <option value="designer">Designer</option>
+                 <option value="tester">Tester</option>
+                </select>
+                 </p><p><label><input type="submit" name="sbt" value="Enviar"/></label></p>
+             </form>
+             <section class="footer">
+                <div class="container">
+                  <ul>
+                    <li class="grid-8"><h2>A EMPRESA :</h2>
+                      <h2><p>Empresa competente,buscamos melhorar os nossos serviços e satisfazer os nosssos
+                        clientes com um bom atendimento.</p></h2>
+                    </li>
+                    <li class="grid-4"><h2>CONTATO :</h2>
+                      <a href="#"></a><img src="icon-2083456_1920.png" width="100px" height="100px" class="logos-redes"></a>
+                    </li>
+                    <li class="grid-4"><h2>ENDEREÇO :</h2>
+                      <h2><p>Rua A,32 CEP 03240-050 Vila Alegre São Paulo-SP</p>
+                      <p>Tel:4040-2020 Email:Vision@gmail.com.Br</p>
+                      <p>WWW.VISION.COM.BR</p></h2>
+                    </li>
+                  </ul>
+                </div>
+              </section>
     </body>
 </html>
- 
