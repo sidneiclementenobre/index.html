@@ -4,56 +4,175 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport"content="white=device-width,initial scale 1.0">
+        <script type="text/javascript" src="js/jquery-v3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
         <style type="text/css"></style>
         <title>SOBRE</title>
         <style>
-            body {
-                background-color: blue;
-            }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-            .logo-texto {
-                font-size: xx-large;
-                margin-left: 20px;
-                color: white;
-                align-items: center;
-            }
+body {
+    background-color: blue;
+}
 
-            h2 {
-                color:white;
-                text-align: center;
-            }
+/* cabeçalho */
 
-            h3 {
-                color: white;
-                text-align: center;
-            }
+header {
+    height: 200px;
+    width:100%;
+    background-color:#4287f5;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
 
-            section {
-                color:white;
-                text-align: left;
-            }
+.logo-imagem {
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius: 25px;
+}
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-texto {
+    font-size:xx-large;
+    margin-left:20px;
+    color:white;
+}
+
+.menu li {
+    display:inline-block;
+    margin: 0 10px;
+}
+
+.menu li a{
+    font-size: 24px;
+    text-decoration:none;
+    color:white;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+    
+.menu li a:hover{
+    background-color: darkgrey;
+}
+
+h1 {
+    color: white;
+    text-align: left;
+}
+
+h2{
+    color:white;
+    text-align: center;
+}
+
+h3 {
+    color:white;
+    text-align: center;
+}
+
+
+ #branden-pic {
+     border: 5px solid blue; 
+     width: 500px;
+ }
+
+.footer h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform:uppercase;
+    margin-top:20px;
+    text-align:center;
+    color:white;
+}
+
+
+.footer h2 { 
+    font-family:sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    text-align:left;
+    text-transform:unset;
+    color:white;
+    margin-top:20px;
+
+}
+
+.logos-redes {
+    margin-top: 20px;
+}
+
         </style>
     </head>
-    <body>
-       <header>
-         <div class="logo-imagem">
-         <div class="logo-texto">
-          <h1>VISION.Games...</h1> 
-       </header>
+  <body>
+    <header>
+        <div class="container.logo">
+          <div class="logo.imagem"><img src="ball-ga01ef38de_1920.jpg" width="100px"heigth="100px">  
+            <div class="logo-texto">
+              <h1>VISION.games...</h1>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="TodososDepartamentos.html">Todos os Departamentos</a></li>
+            <li><a href="SAC.html">SAC</a></li>
+            <li><a href="Login.html">Login</a></li>
+          </ul>
+        </div>
+      </header>
+       
+        <img id="branden-pic" src="branden-skeli-r4YWfVVwTQ8-unsplash.jpg">
+        <h1 id="branden-text">Vision... sua loja E-Gamer!!!</h1>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script>
+         $("#branden-pic").hide();
+         $("#branden-text").hide();
+         $("#branden-pic").slideDown(6000,
+ function() {
+             $("#branden-text").fadeIn();
+         });
+     </script>
+ </body>
        <div class="container-texto"></div>
-          <h2>Sobre</h2>
+        <h2>Sobre</h2>
         <h3>Somos uma Empresa de comercio eletronico voltado para as pessoas do mundo gamer.</h3>
         <h3>Nossos consumidores tem idade que varia entre 14 e 40 anos.</h3>
         <h3>Existem ow consumidores mais velhos que utilizam no dia a dia nossos produtos,como
         <h3>PC notebook,para o trabalho,estudo ou hobby.</h3>
         <h3>Já os querem montar ou comprar um PC Gamer costumam ser adolecentes e jovens do sexo
         <h3>masculino,com idades entre 14 e 24 anos.</h3>
-        <h3>Temos grande experiencia no mercado de tecnologia da infrmação.</h3>
-       <section class="footer">
-           <p>Endereço:Rua A,32 Vila Alegre São Paulo</p>
-           <p>CEP-03240-050 Tel-4040-2020</p>
-           <p>Email:Vision@gmail.com.br</p>
-           <p>WWW.VISION.COM.BR</p>
-       </section>
+        <h3>Temos grande experiencia no mercado de tecnologia da informação.</h3>
+        <section class="footer">
+            <div class="container">
+              <ul>
+                <li class="grid-8"><h2>A EMPRESA :</h2>
+                  <h2><p>Empresa competente,buscamos melhorar os nossos serviços e satisfazer os nosssos
+                    clientes com um bom atendimento.</p></h2>
+                </li>
+                <li class="grid-4"><h2>CONTATO :</h2>
+                  <a href="#"></a><img src="icon-2083456_1920.png" width="100px" height="100px" class="logos-redes"></a>
+                </li>
+                <li class="grid-4"><h2>ENDEREÇO :</h2>
+                  <h2><p>Rua A,32 CEP 03240-050 Vila Alegre São Paulo-SP</p>
+                  <p>Tel:4040-2020 Email:Vision@gmail.com.Br</p>
+                  <p>WWW.VISION.COM.BR</p></h2>
+                </li>
+              </ul>
+            </div>
+          </section>
     </body>
 </html>
